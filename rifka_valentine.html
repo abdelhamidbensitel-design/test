@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rifka ❤️</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4e8a, #ff758c);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+h1 {
+    color: white;
+    font-size: 2.7rem;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 20px;
+    transition: 0.2s;
+}
+
+#yes {
+    background-color: #ff0055;
+    color: white;
+}
+
+#yes:hover {
+    transform: scale(1.1);
+}
+
+#no {
+    background-color: white;
+    color: #ff0055;
+    position: absolute;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 22px;
+    color: white;
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Rifka, Will You Be My Valentine? ❤️</h1>
+    <button id="yes">Yes ❤️</button>
+    <button id="no">No 💔</button>
+    <div class="message" id="message">
+        You just made me the happiest man alive, Rifka 😍💘
+    </div>
+</div>
+
+<script>
+const noButton = document.getElementById("no");
+const yesButton = document.getElementById("yes");
+const message = document.getElementById("message");
+
+noButton.addEventListener("mouseover", function() {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noButton.style.left = x + "px";
+    noButton.style.top = y + "px";
+});
+
+yesButton.addEventListener("click", function() {
+    message.style.display = "block";
+});
+</script>
+
+</body>
+</html>
